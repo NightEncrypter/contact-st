@@ -68,7 +68,7 @@ const Login = (props) => {
 		onChange={onChange}
 							required />
 		<label htmlFor="email">Email</label>
-						
+		<span><i className="fas fa-user"></i></span>
 		<div className="bb-line"></div>
 						
 	</div>
@@ -81,7 +81,7 @@ const Login = (props) => {
 			className="reg-input"
 							required />
 		<label htmlFor="password">Password</label>
-						
+	<span><i className="fas fa-lock"></i></span>
 		<div className="bb-line"></div>
 	</div>
 	<input type="submit" value="Submit" className="login-btn" />

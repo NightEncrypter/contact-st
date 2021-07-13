@@ -461,7 +461,17 @@ padding: 1rem;
 height: 22rem;
 	// max-height:22rem ;
 	max-width:25rem;
+	span{
+		position:absolute;
+		bottom:8px;
+		right:5px;
+		color: rgba(192, 192, 192, 0.62);
+		transition: color 0.3s;
+	}
 	
+	.input-style:focus ~ span,.input-style:valid ~ span{
+		color:lighten($bg-color,10%);
+	}
 
 	h2 {
 		font-weight: $fw-xxl;
@@ -538,17 +548,20 @@ input:focus ~ .bb-line::before{
 display:flex;
 width:100%;
 justify-content:space-around;
+
 }
 
 .btn-block{
 	@extend %btn-list;
 	display: block;
-	font-weight:600;
+	font-weight: $fw-xl;
+font-family: 'Josefin Sans', sans-serif;
+cursor: pointer;
 	margin: 0;
 	margin-bottom: 0.4rem;
 	width: $btn-width-l - 1rem;
 	background: #1596ec;
-	font-family: 'Josefin Sans', sans-serif;
+
 	color: #f2f2f2;
 	transform: scaleX(1);
 	font-size:16px;
@@ -568,15 +581,16 @@ justify-content:space-around;
 
 	
 	input[type='submit'] {
-	font-family: 'Josefin Sans', sans-serif;
-font-size:$btn-size;
+		font-weight: $fw-xl;
+		font-family: 'Josefin Sans', sans-serif;
+font-size: 16px;
 		@extend %btn-list;
-		font-weight:600;
+		
 		margin: 0;
 		transform: scaleX(1);
-
+padding:0.5rem 0.5rem;
 		margin-bottom: 0.4rem;
-		width: $btn-width-l - 1rem;
+		width: $btn-width-l;
 		background: #580472;
 		color: $lt-color;
 		transition:transform,background,box-shadow 0.5s;
@@ -626,7 +640,17 @@ margin-top:3rem ;
 		width:22rem;
 		height:27rem;
 
-
+		span{
+			position:absolute;
+			bottom:8px;
+			right:5px;
+			color: rgba(192, 192, 192, 0.62);
+			transition: color 0.3s;
+		}
+		
+		.reg-input:focus ~ span,.reg-input:valid ~ span{
+			color:lighten($bg-color,10%);
+		}
 	
 
 
@@ -793,9 +817,19 @@ border-radius: 0.3rem;
 	height:30px;
 	width:100%;
 	
+span{
+	position:absolute;
+	bottom:8px;
+	right:5px;
+	color: rgba(192, 192, 192, 0.62);
+	transition: color 0.3s;
+}
 
+.reg-input:focus ~ span,.reg-input:valid ~ span{
+	color:lighten($bg-color,10%);
+}
 	.reg-input{
-		color: darken(#580472,15%);
+		color: darken(#580472,20%);
 		border:none;
 		outline:none;
 		border-bottom:1px solid $bg-color ;
@@ -860,6 +894,8 @@ border-bottom:2px solid $bg-color;
 		transform: scale(1);
 		
 	}
+
+
 }
 		
 

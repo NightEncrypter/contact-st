@@ -68,6 +68,8 @@ useEffect(() => {
 						value={name}
 						onChange={onChange} required
 						/>
+	<span><i className="fas fa-user"></i></span>
+
 					<label htmlFor="name">Name</label>
 						<div className="bb-line"></div>
 				</div>
@@ -80,6 +82,8 @@ useEffect(() => {
 						// placeholder="Enter email"
 						onChange={onChange} required
 						/>
+	<span><i className="fas fa-at"></i></span>
+
 					<label htmlFor="email">Email</label>
 						<div className="bb-line"></div>
 				</div>
@@ -94,6 +98,8 @@ useEffect(() => {
 							required
 						// placeholder="Enter password"
 						/>
+	<span><i className="fas fa-lock"></i></span>
+
 							<label htmlFor="password">Password</label>
 							<div className="bb-line"></div>
 						
@@ -109,6 +115,9 @@ useEffect(() => {
 							required
 						// placeholder="Enter confirm password"
 						/>
+
+	<span><i className="fas fa-lock"></i></span>
+
 								<label htmlFor="password2">Confirm Password</label>
 		<div className="bb-line"></div>
 						

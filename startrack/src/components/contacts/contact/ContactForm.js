@@ -120,6 +120,8 @@ const ContactForm = () => {
 					className="input-style"
 					required
 				/>
+				<span><i className="fas fa-user"></i></span>
+
 					<label  htmlFor="name">
 					Name
 				</label>
@@ -138,6 +140,7 @@ const ContactForm = () => {
 					onChange={onChange}
 				required
 				/>
+				<span><i className="fas fa-at"></i></span>
 					<label htmlFor="email" >
 					Email
 				</label>
@@ -157,6 +160,8 @@ const ContactForm = () => {
 					onChange={onChange}
 				required
 				/>
+				<span><i className="fas fa-mobile-alt"></i></span>
+
 				<label htmlFor="phone" >
 					Phone
 				</label>

@@ -1,0 +1,12 @@
+/node_modules
+/.history
+/startrack/node_modules
+/startrack/build
+/startrack/.env.local
+/startrack/.env.development.local
+/startrack/.env.test.local
+/startrack/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

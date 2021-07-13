@@ -1,0 +1,61 @@
+
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "name":"hobbit",
+    "email":"hobbit123@gmail.com",
+    "password":"manas123@"
+
+}
+###
+
+
+POST http://localhost:5000/api/auth
+Content-Type: application/json
+Au
+
+{
+    "email":"manasrathore2342@gmail.com",
+    "password":"manas123@"
+
+}
+###
+
+
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "name":"hobbit",
+    "email":"hobbit123@gmail.com",
+    "password":"manas123@"
+
+}
+###
+
+
+GET http://localhost:5000/api/auth
+
+auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiI2MGU1ZDI0ODk5YzM1NTBlYjA1ZjhiNzEifSwiaWF0IjoxNjI1Njc0MzEzfQ.rij46lh5_DOSDcHMzrmxnYG8MLV9X9kHygcTu4Iahps
+
+
+
+###
+
+
+GET http://localhost:5000/api/contacts
+
+auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBjYjc3NzZlYmY0MjExM2QwNzg4MmU2In0sImlhdCI6MTYyMzk1NjU1MH0.oZQqsyb2FCPjKXJQglLTT0Qj5PV2B01eGTMyByoOoVU
+
+
+
+###
+
+
+GET http://localhost:5000/api/contacts
+
+
+
+
+

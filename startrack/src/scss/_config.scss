@@ -1,0 +1,28 @@
+// $pd-mg-val:(1, 2, 3, 4, 5);
+
+// @each $sep in $pd-mg-val {
+// 	.m-#{$sep} {
+// 		margin: #{$sep}rem;
+// 	}
+// 	.my-#{$sep} {
+// 		margin: #{$sep}rem 0;
+// 	}
+// 	.p-#{$sep} {
+// 		padding: #{$sep}rem;
+// 	}
+// 	.py-#{$sep} {
+// 		padding: #{$sep}rem 0;
+// 	}
+// }
+
+// @each $short in $pd-mg-value{
+// .grid-auto-#{$short}{
+// 	display: grid;
+// 	grid-template-columns: repeat(#{short},minmax(200px,1fr));
+// }
+// .grid-high-#{$short}{
+// 	display: grid;
+// 	grid-template-columns: repeat(#{short},minmax(300px,1fr));
+// }
+// }
+

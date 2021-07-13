@@ -1,0 +1,85 @@
+import { Link } from 'react-router-dom';
+import { Fragment,useContext } from 'react';
+import AuthContext from '../../context/auth/authContext'
+// import PropTypes from 'prop-types';
+
+
+
+
+const Navbar = ({ title, icon }) => {
+
+	const authContext = useContext(AuthContext);
+
+	const { isAuthenticated } = authContext;
+
+	const authState = () => {
+		return (
+			<Fragment>
+				<li>
+					<Link to="/login" className="sign-in">
+						Login
+					</Link>
+					</li>
+				<li>
+				<Link to="/about">
+				<i class="fas fa-sign-out-alt"></i>
+					</Link>
+				</li>
+			</Fragment>
+			
+		)
+	}
+	const guestState = () => {
+		return (
+			<Fragment>
+			
+				<li>
+				<Link to="/about">
+				About
+					</Link>
+				</li>
+				<li>
+				<Link to="/register">
+				Register
+					</Link>
+				</li>
+				<li>
+				<Link to="/login" className="sign-in">
+				Login
+					</Link>
+				</li>
+				<div className="hamburger" >
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			</Fragment>
+			
+		)
+	}
+	return (
+		<div className="navbar bg-primary">
+			<h1>
+				<i className={icon}></i> {title}
+			</h1>
+			<ul>
+			{isAuthenticated?authState:guestState}	
+			</ul>
+			<Link className="sign-in" to="/login">
+				Log In
+			</Link>
+		
+		</div>
+	);
+};
+
+// proptype checking
+// Navbar.propTypes = {
+// 	title: PropTypes.string.isRequired,
+// 	icon: PropTypes.string.isRequired,
+// };
+Navbar.defaultProps = {
+	title: 'Contact Box',
+	icon: 'fas fa-address-book',
+};
+export default Navbar;

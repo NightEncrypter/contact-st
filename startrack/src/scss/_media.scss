@@ -111,7 +111,7 @@ display: block;
 
   // Contact animation boxes
   .main-lists {
-    max-width: 30rem;
+    max-width:24rem;
     margin: 0 auto;
     margin-top: 4rem;
 
@@ -121,14 +121,14 @@ display: block;
 
       width: 80%;
       margin: 0.7rem auto;
-      padding: 0.2rem 0.5rem;
+      padding: 0.2rem 1rem;
 
       
       h1{
-        margin-top:1.5rem;
+        margin-top:2rem;
       }
 
-      
+
     }
     .lists {
       .contact-item-box {
@@ -136,6 +136,10 @@ display: block;
         // min-width: 14rem;
         
         max-width: 18rem;
+
+        h1{
+          font-size:16px;
+        }
       }
     }
   }
@@ -231,6 +235,9 @@ transition:0.3s;
   // .contact-form {
   //   // margin-top: 4rem;
 
+  .container{
+    padding:0 2rem;
+  }
 
  
   //   .radio-btns {
@@ -257,10 +264,25 @@ transition:0.3s;
   body {
     overflow-x: hidden;
   }
+  .container {
+    margin: 0;
+  }
 
+  .main-lists{
+    
+    .contact-lists{
+      margin-top:2rem;
+    }
 
-  .main-list{
-    margin:0 auto;
+    .contact-item-box{
+
+      width:13rem;
+      h1{
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        font-size:16px;
+      }
+    }
   }
 
   #form-reg {
@@ -280,9 +302,7 @@ padding: 0 1rem;
       font-size: 1.8rem;
     }
   }
-  .container {
-    margin: 0;
-  }
+
   .grid-2 {
   
 

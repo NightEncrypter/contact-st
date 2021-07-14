@@ -15,7 +15,7 @@ const Contacts = () => {
 	if (contacts !== null && contacts.length === 0 && !loading) {
 		return (
 			<h4 className="list-alert">
-				<i className="far fa-times-circle"></i>&nbsp;&nbsp;Please add a contact
+				<i className="fas fa-user-plus"></i>&nbsp;&nbsp;Please add a contact
 			</h4>
 		);
 	} else {

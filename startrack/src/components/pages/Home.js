@@ -1,7 +1,7 @@
 import Contacts from '../contacts/contact/Contacts';
 import ContactForm from '../contacts/contact/ContactForm';
 import SearchBox from '../contacts/contact/SearchBox';
-import { useEffect ,useContext} from 'react';
+import { useEffect,useState ,useContext} from 'react';
 import AuthContext from '../../context/auth/authContext'
 import { useSpring, animated } from 'react-spring';
 
@@ -20,6 +20,12 @@ const Home = () => {
 		// eslint-disable-next-line
 	},[])
 
+	const [open, setOpen] = useState(false);
+
+	const popShow = () => {
+		setOpen(!open);
+	}
+
 	return (
 	
 		<div className="grid-2"> 
@@ -27,7 +33,7 @@ const Home = () => {
 
 			<animated.div style={springProps1}>
 		
-			<ContactForm/>
+				<ContactForm open={open} />
 		
 		</animated.div>
 		
@@ -45,9 +51,9 @@ const Home = () => {
 		</div></animated.div>
 	
 
-
+			<button className={!open?"add-contact":"add-contact cross"} onClick={popShow}><i className={!open?"fas fa-user-plus":"fas fa-times"}></i></button>
+     
 		</div>
-
 
 	)
 

@@ -4,7 +4,7 @@ import ContactContext from '../../../context/contact/contactContext';
 import AlertContext from '../../../context/alert/alertContext';
 
 
-const ContactForm = () => {
+const ContactForm = ({open}) => {
 	const alertContext = useContext(AlertContext);
 	const contactContext = useContext(ContactContext);
 	const { addContact, updateContact,current ,clearCurrent,error,clearErrorContacts} = contactContext;
@@ -107,7 +107,9 @@ const ContactForm = () => {
 	// pulling out from  contact state
 	const { name, email, phone, type } = contact;
 	return (
-		<form action="#" className="contact-form" onSubmit={onSubmit}>
+		<div className={open?"active overlay":"overlay"}>
+		<div className={open?"active popup-box":"popup-box"}>
+			<form action="#" className="contact-form" onSubmit={onSubmit}>
 			<h2>{current !== null ? 'Update Contact' : 'Add Contact'}</h2>
 			<div className="group">
 			
@@ -206,7 +208,112 @@ const ContactForm = () => {
 			</div>
 			
 
-		</form>
+		</form>	
+			</div>
+			</div>
+		// <form action="#" className="contact-form" onSubmit={onSubmit}>
+		// 	<h2>{current !== null ? 'Update Contact' : 'Add Contact'}</h2>
+		// 	<div className="group">
+			
+		// 		<input
+		// 			style={style1}
+		// 			type="text"
+		// 			name="name"
+		// 			value={name}
+		// 			onChange={onChange}
+		// 			className="input-style"
+		// 			required
+		// 		/>
+		// 		<span><i className="fas fa-user"></i></span>
+
+		// 			<label  htmlFor="name">
+		// 			Name
+		// 		</label>
+
+		// 	<div className="bb-line"></div>
+
+		// 	</div>
+		// 	<div className="group">
+			
+		// 		<input
+		// 			style={style1}
+		// 			type="email"
+		// 			name="email"
+		// 			value={email}
+		// 			className="input-style"
+		// 			onChange={onChange}
+		// 		required
+		// 		/>
+		// 		<span><i className="fas fa-at"></i></span>
+		// 			<label htmlFor="email" >
+		// 			Email
+		// 		</label>
+		// 	<div className="bb-line"></div>
+
+		// 	</div>
+
+		// 	<div className="group">
+				
+		// 		<input
+		// 			style={style1}
+		// 			type="number"
+		// 			name="phone"
+			
+		// 			value={phone}
+		// 			className="input-style"
+		// 			onChange={onChange}
+		// 		required
+		// 		/>
+		// 		<span><i className="fas fa-mobile-alt"></i></span>
+
+		// 		<label htmlFor="phone" >
+		// 			Phone
+		// 		</label>
+		// 	<div className="bb-line"></div>
+		// 	</div>
+		// 	<div className="radio-btns">
+		// 		<div>
+		// 		<input
+		// 			type="radio"
+		// 			name="type"
+		// 			id="radio-1"
+		// 			onChange={onChange}
+		// 			value="personal"
+		// 			checked={type === 'personal'}
+		// 		/>
+		// 			{'  '}Personal
+		// 		</div>
+			
+			
+
+		// 		<div>
+		// 		<input
+		// 			type="radio"
+		// 			name="type"
+		// 			onChange={onChange}
+		// 			id="radio-2"
+		// 			value="professional"
+		// 			checked={type === 'professional'}
+		// 			/>{' '}Professional
+		// 		</div>
+			
+		
+		// 	</div>
+		// 	<div>
+		// 	<input
+		// 		type="submit"
+		// 		value={current !== null ? 'Update Contact' : 'Add Contact'}
+				
+		// 		onSubmit={onSubmit}
+		// 	/>
+		// 		{current && <button className="btn-block" onClick={clearContact}>Clear Contact</button> }
+		// 	</div>
+			
+
+		// </form>
+
+
+		
 	);
 };
 

@@ -61,12 +61,13 @@ const Login = (props) => {
 
 	<div className="reg-group">
 		<input
-			type="email"
+			type="text"
 			name="email"
-			className="reg-input"
-			value={email}
+		className="reg-input"
+		value={email}
 		onChange={onChange}
-							required />
+		autoComplete="on"
+		required />
 		<label htmlFor="email">Email</label>
 		<span><i className="fas fa-user"></i></span>
 		<div className="bb-line"></div>
@@ -78,7 +79,8 @@ const Login = (props) => {
 			name="password"
 			value={password}
 			onChange={onChange}
-			className="reg-input"
+							className="reg-input"
+							autoComplete="off"
 							required />
 		<label htmlFor="password">Password</label>
 	<span><i className="fas fa-lock"></i></span>

@@ -64,7 +64,7 @@ useEffect(() => {
 						type="text"
 						name="name"
 						className="reg-input"
-						
+						autoComplete="off"
 						value={name}
 						onChange={onChange} required
 						/>
@@ -79,7 +79,7 @@ useEffect(() => {
 						name="email"
 						className="reg-input"
 						value={email}
-						// placeholder="Enter email"
+						autoComplete="off"
 						onChange={onChange} required
 						/>
 	<span><i className="fas fa-at"></i></span>
@@ -96,7 +96,7 @@ useEffect(() => {
 						onChange={onChange}
 							value={password}
 							required
-						// placeholder="Enter password"
+							autoComplete="off"
 						/>
 	<span><i className="fas fa-lock"></i></span>
 
@@ -113,7 +113,7 @@ useEffect(() => {
 						className="reg-input"
 							value={password2}
 							required
-						// placeholder="Enter confirm password"
+							autoComplete="off"
 						/>
 
 	<span><i className="fas fa-lock"></i></span>

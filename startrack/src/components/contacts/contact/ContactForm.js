@@ -93,6 +93,10 @@ const ContactForm = ({open ,popClose}) => {
 			type: 'personal',
 		});
 	};
+
+	const closeBox = () => {
+		popClose();
+	}
 	const clearContact = () => {
 		clearCurrent();
 		setContact({
@@ -103,14 +107,16 @@ const ContactForm = ({open ,popClose}) => {
 		})
 
 	}
+	
 
 	// pulling out from  contact state
 	const { name, email, phone, type } = contact;
 	return (
 		<div className={open?"active overlay":"overlay"}>
 			<div className={open ? "active popup-box" : "popup-box"}>
-				<button className="close-btn" onClick={popClose}>Close </button>
-			<form action="#" className="contact-form" onSubmit={onSubmit}>
+			<button className="closebtn" onClick={closeBox}>&times; </button>
+				<form action="#" className="contact-form" onSubmit={onSubmit}>
+					
 			<h2>{current !== null ? 'Update Contact' : 'Add Contact'}</h2>
 			<div className="group">
 			
@@ -121,6 +127,7 @@ const ContactForm = ({open ,popClose}) => {
 					value={name}
 					onChange={onChange}
 					className="input-style"
+					autoComplete="off"
 					required
 				/>
 				<span><i className="fas fa-user"></i></span>
@@ -141,6 +148,7 @@ const ContactForm = ({open ,popClose}) => {
 					value={email}
 					className="input-style"
 					onChange={onChange}
+					autoComplete="off"
 				required
 				/>
 				<span><i className="fas fa-at"></i></span>
@@ -157,7 +165,7 @@ const ContactForm = ({open ,popClose}) => {
 					style={style1}
 					type="number"
 					name="phone"
-			
+					autoComplete="off"
 					value={phone}
 					className="input-style"
 					onChange={onChange}

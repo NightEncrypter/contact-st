@@ -162,7 +162,7 @@ right:1.5rem;
 z-index:5;
 
 cursor: pointer;
-transition:0.3s;
+transition:0.5s;
 
 }
 
@@ -194,27 +194,20 @@ transition:0.3s;
   .popup-box{
     z-index:10;
     
-// display: none;
-    // border-radius: 40px;
-    // box-shadow:0 0 10px 0 rgba(51, 16, 16, 0.2);
+
     width:23rem;
     height: 26rem;
     position:fixed;
     top:50%;
     left:50%;
-    // transform: translateY(700px);
-    // transform: translate(0);
+
     transform: scale(0);
-    // transform: translate(-50%,-50%);
+   
     transition: 0.5s;
     
 
  
-    // transform:translateY(0);
-    // position:fixed;
-    // bottom:1rem;
-    // right:1rem;
-
+  
 
     .contact-form{
       width:100%;
@@ -231,9 +224,6 @@ transition:0.3s;
 
   }
 
-  // PRIVATE ROUTE FORM
-  // .contact-form {
-  //   // margin-top: 4rem;
 
   .container{
     padding:0 2rem;

@@ -4,7 +4,7 @@ import ContactContext from '../../../context/contact/contactContext';
 import AlertContext from '../../../context/alert/alertContext';
 
 
-const ContactForm = ({open}) => {
+const ContactForm = ({open ,popClose}) => {
 	const alertContext = useContext(AlertContext);
 	const contactContext = useContext(ContactContext);
 	const { addContact, updateContact,current ,clearCurrent,error,clearErrorContacts} = contactContext;
@@ -108,7 +108,8 @@ const ContactForm = ({open}) => {
 	const { name, email, phone, type } = contact;
 	return (
 		<div className={open?"active overlay":"overlay"}>
-		<div className={open?"active popup-box":"popup-box"}>
+			<div className={open ? "active popup-box" : "popup-box"}>
+				<button className="close-btn" onClick={popClose}>Close </button>
 			<form action="#" className="contact-form" onSubmit={onSubmit}>
 			<h2>{current !== null ? 'Update Contact' : 'Add Contact'}</h2>
 			<div className="group">

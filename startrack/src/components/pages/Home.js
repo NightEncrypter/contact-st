@@ -23,7 +23,7 @@ const Home = () => {
 	const [open, setOpen] = useState(false);
 
 	const popShow = () => {
-		setOpen(!open);
+		setOpen(true);
 	}
 
 	return (
@@ -33,7 +33,7 @@ const Home = () => {
 
 			<animated.div style={springProps1}>
 		
-				<ContactForm open={open} />
+				<ContactForm open={open} popClose={()=>setOpen(false)} />
 		
 		</animated.div>
 		

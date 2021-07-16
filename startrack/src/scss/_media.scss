@@ -229,8 +229,8 @@
   // Contact animation boxes
   .main-lists {
     max-width: 24rem;
-    margin: 0 auto;
-    margin-top: 4rem;
+    margin: 4rem auto;
+    
 
     .contact-lists {
       width: 80%;
@@ -346,7 +346,7 @@ padding: .5rem;
   // }
 
   #form-reg {
-    margin-top: 2.5rem;
+    // margin-top: 2.5rem;
     width: 20rem;
     height: 26rem;
     padding: 1rem;
@@ -371,7 +371,7 @@ padding: .5rem;
 
   .main-lists {
     max-width: 17rem;
-    margin-top:1.5rem;
+    margin:1.5rem auto;
 
     #search-box{
       margin:0;
@@ -398,8 +398,8 @@ padding: .5rem;
     }
   }
   .login-form {
-    max-width: 17rem;
-    min-width: 13rem;
+    max-width: 19rem;
+    min-width: 8rem;
 
     input[type="submit"] {
       width: 8rem;
@@ -408,10 +408,10 @@ padding: .5rem;
   }
 
   #form-reg {
-    margin: 0 auto;
-    margin-top: 4rem;
+    margin: 4rem auto;
+  
     height: 26rem;
-    max-width: 17rem;
+    max-width: 19rem;
 
     input[type="submit"] {
       width: 10rem;

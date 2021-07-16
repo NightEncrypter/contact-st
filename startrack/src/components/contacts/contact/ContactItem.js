@@ -6,7 +6,7 @@ const ContactItem = ({ contact, popOpen }) => {
   const { deleteContact, currentContact, clearCurrent } = contactContext;
   const { name, phone, email, type, _id } = contact;
 
-  const { display, setDisplay } = useState(false);
+  // const { display, setDisplay } = useState(false);
 
   const onDelete = () => {
     deleteContact(_id);
@@ -18,16 +18,16 @@ const ContactItem = ({ contact, popOpen }) => {
     popOpen();
   };
 
-  const shContact = () => {
-    setDisplay(!display);
-  };
+  // const shContact = () => {
+  //   setDisplay(!display);
+  // };
   const smallQuery = (
     <div className="btns-icons">
       <button className="btn-danger" onClick={onDelete}>
-        <i class="fas fa-trash-alt"></i>
+        <i className="fas fa-trash-alt"></i>
       </button>
       <button className="btn-normal" onClick={setCurrent}>
-        <i class="fas fa-pen"></i>
+        <i className="fas fa-pen"></i>
       </button>
     </div>
   );

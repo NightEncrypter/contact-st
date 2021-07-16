@@ -22,7 +22,7 @@ const ContactItem = ({ contact, popOpen }) => {
     setDisplay(!display);
   };
   const smallQuery = (
-    <div className={display ? "btns-icons active" : "btns-icons"}>
+    <div className="btns-icons">
       <button className="btn-danger" onClick={onDelete}>
         <i class="fas fa-trash-alt"></i>
       </button>

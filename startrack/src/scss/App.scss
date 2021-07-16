@@ -345,7 +345,7 @@ height:100%;
 	overflow: hidden;
 	
 	width:100%;
-z-index:100;
+z-index:9;
 position: sticky;
 top: 0;
 left:0;
@@ -1097,6 +1097,7 @@ box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.2) ;
 
 // Alert
 .alert{
+	z-index:100;
 // margin: 0.4rem auto;
 position: absolute;
 top:12%;
@@ -1106,10 +1107,10 @@ text-align: center;
 padding:0.5rem;
 width:max-content;
 transition: 0.3s ease-in;
-background:#ffffff;
+background:white;
 // color:white;
-box-shadow:0 0 10px 0 rgba(51, 16, 16, 0.2);
-
+box-shadow:0 0 10px 0 rgba(51, 16, 16, 0.4);
+border:1px solid $bg-color;
 // border-radius:1rem;
 // color:#f84444;
 }

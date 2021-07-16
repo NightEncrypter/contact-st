@@ -1106,11 +1106,12 @@ transform:translate(-50%,-50%);
 text-align: center;
 padding:0.5rem;
 width:max-content;
+font-weight: $fw-xxl;
 transition: 0.3s ease-in;
 background:white;
 // color:white;
-box-shadow:0 0 10px 0 rgba(51, 16, 16, 0.4);
-border:1px solid $bg-color;
+box-shadow:0 0 8px 0 rgba(51, 16, 16, 0.3);
+// border:1px solid $bg-color;
 // border-radius:1rem;
 // color:#f84444;
 }

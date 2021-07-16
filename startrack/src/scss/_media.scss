@@ -287,25 +287,25 @@
     bottom: 0;
     right: 0;
     z-index: 19;
-    transform-origin: left;
-    transform: scaleX(0);
+    transform-origin: bottom;
+    transform: scaleY(0);
     transition: 0.5s;
   }
   .active.overlay {
-    transform: scaleX(1);
+    transform: scaleY(1);
   }
   .popup-box {
-    position: relative;
+  
 
     z-index: 19;
+margin: 0 auto;
+margin-top: 30%;
+    max-width: 25rem;
+  height: 25rem;
+ 
 
-    width: 23rem;
-    height: 26rem;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-
-    transform: scale(0);
+    transform: translateY(100%);
+  
 
     transition: 0.5s;
 
@@ -333,9 +333,9 @@ padding: .5rem;
   }
 
   .active.popup-box {
-    transform: scale(1);
-
-    transform: translate(-50%, -50%);
+    
+    transform: translateY(0%);
+  
   }
 
   .container {
@@ -433,8 +433,11 @@ padding: .5rem;
   .popup-box {
     position: relative;
 
+margin-top:35%;
     max-width: 18rem;
-    max-height: 24rem;
+    // min-width: 10rem;
+    padding: 0.5rem;
+    height: 25rem;
 
     .close-btn {
       font-size: 1.3rem !important;

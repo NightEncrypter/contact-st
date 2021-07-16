@@ -70,7 +70,8 @@ const ContactForm = ({open ,popClose}) => {
 		e.preventDefault();
 
 		if (current === null && name && email && phone !== '') {
-		addContact(contact);
+			addContact(contact);
+			popClose();
 		alertContext.setAlert('Contact saved','success' );
 		} else {
 			updateContact(contact);

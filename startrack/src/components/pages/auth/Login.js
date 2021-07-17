@@ -20,8 +20,8 @@ const Login = (props) => {
   const [icon, setIcon] = useState(false);
   useEffect(() => {
     if (isAuthenticated) {
-      props.history.push("/");
       setAlert("Login success", "success");
+      props.history.push("/");
     }
 
     if (error === "user not found") {

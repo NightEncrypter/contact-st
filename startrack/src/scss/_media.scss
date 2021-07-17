@@ -1,129 +1,32 @@
 @media (max-width: 720px) {
-  body {
-    overflow-x: hidden;
-  }
+ 
 
 
-	.svg1{
-		top: 19%;
-		position:fixed;
-		// height:30%;
-		width:100%;
-		z-index:-2;
-	
 
-
-	}
-	.svg-square1{
-		top: 18%;
-		position:fixed;
-		// height:30%;
-		width:100%;
-		z-index:-2;
-	
-
-
-	}
-	.svg-square2{
-		top: 20%;
-		position:fixed;
-		// height:30%;
-		width:100%;
-		z-index:-2;
-
-	}
-
-	.svg-square3{
-		top: 25%;
-		position:fixed;
-		// height:30%;
-		width:100%;
-		z-index:-2;
-	}
-
-
-	.svg-square4{
-		top: 29%;
-		position:fixed;
-		// height:30%;
-		width:100%;
-		z-index:-2;
-	
-
-
-	}
-	.svg-square5{
-		top: 33%;
-		position:fixed;
-		// height:30%;
-		width:100%;
-		z-index:-2;
-	
-
-
-	}
-	.svg-square6{
-		top: 36%;
-		position:fixed;
-		// height:30%;
-		width:100%;
-		z-index:-2;
-	
-
-
-	}
-	.svg-square7{
-		top: 40%;
-		position:fixed;
-		// height:30%;
-		width:100%;
-		z-index:-2;
-	
-
-
-	}
-	.svg-square8{
-		top: 45%;
-		position:fixed;
-		// height:30%;
-		width:100%;
-		z-index:-2;
-	
-
-
-	}
-	.svg3{
-		top: 50%;
-		position:fixed;
-		// height:30%;
-		width:100%;
-		z-index:-2;
-	
-
-
-	}
-	.svg2{
-		top:2%;
-		position:fixed;
-		// height:30%;
-		width:100%;
-		z-index:-2;
-	
-
-
-	}
 
 
 
   .contact-item-box .btns{
-    display:none;
     
 
+    .btn-danger, .btn-normal{
+
+      width:1.8rem;
+      height:1.8rem;
+      padding: 0.5rem;
+      span{
+        display:none;
+      }
+      i{
+        display:block;
+        color:white;
+        font-size:14px;
+      }
+    }
+  
   }
 
-  .contact-item-box .btns-icons{
-    display:flex;
-  }
+ 
 
  
   .navbar {
@@ -236,7 +139,7 @@
     .contact-lists {
       width: 80%;
       margin: 1rem auto;
-      padding: 0.2rem 1rem;
+      padding: 0.3rem 1rem;
 
       h1 {
         margin-top: 2rem;
@@ -245,9 +148,9 @@
     .lists {
       .contact-item-box {
         padding: 0.5rem 1rem;
-        // min-width: 14rem;
+        
 
-        max-width: 15rem;
+        max-width: 80%;
 
         h1 {
           font-size: 16px;
@@ -368,12 +271,13 @@ padding: .5rem;
   }
   .container {
     margin: 0;
-    padding: 0 1rem;
+    padding: 0 1.2rem;
   }
 
   .main-lists {
-    max-width: 17rem;
+    max-width: 20rem;
     margin:1.5rem auto;
+    padding:0.6rem;
 
     #search-box{
       margin:0;
@@ -381,18 +285,18 @@ padding: .5rem;
 
     .contact-lists {
       margin: 1rem auto;
-      width: 90%;
+      max-width: 80%;
+      padding:0.2rem 0.6rem;
+      font-size: 16px;
     }
 
     .contact-item-box {
-      padding: 0.5rem;
-      width: 13rem;
+      padding: 0.2rem;
+    //  max-width:10%;
+      
       margin:1.2rem auto;
 
-      .btn-danger,
-      .btn-normal {
-        width: 3rem;
-      }
+     
       h1 {
         margin-bottom: 0;
         font-size: 16px;

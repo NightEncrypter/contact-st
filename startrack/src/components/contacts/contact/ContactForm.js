@@ -7,7 +7,7 @@ import AlertContext from '../../../context/alert/alertContext';
 const ContactForm = ({open ,popClose}) => {
 	const alertContext = useContext(AlertContext);
 	const contactContext = useContext(ContactContext);
-	const { addContact, updateContact,current ,clearCurrent,error,clearErrorContacts} = contactContext;
+	const { addContact,updateContact,current ,clearCurrent,error,clearErrorContacts} = contactContext;
 
 	const [alert1, setAlert1] = useState(false);
 	// const [alert2, setAlert2] = useState(false);
@@ -69,10 +69,15 @@ const ContactForm = ({open ,popClose}) => {
 	const onSubmit = (e) => {
 		e.preventDefault();
 
+		
+
 		if (current === null && name && email && phone !== '') {
 			addContact(contact);
 			popClose();
-		alertContext.setAlert('Contact saved','success' );
+			alertContext.setAlert('Contact saved','success' );
+
+			
+		
 		} else {
 			updateContact(contact);
 			clearCurrent();

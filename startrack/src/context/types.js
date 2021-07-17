@@ -7,7 +7,7 @@ export const CLEAR_CURRENT = 'CLEAR_CURRENT';
 export const GET_CONTACT = 'GET_CONTACT';
 export const CLEAR_CONTACTS = 'CLEAR_CONTACTS';
 export const GET_ERROR = 'GET_ERROR';
-
+export const LOADER = 'LOADER';
 export const SEARCH_CONTACTS = 'SEARCH_CONTACTS';
 // export const SEARCH_CONTACTS = 'SEARCH_CONTACTS';
 export const CLEAR_FILTER = 'CLEAR_FILTER';

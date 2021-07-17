@@ -3,14 +3,15 @@ import React, { useReducer } from 'react';
 import axios from 'axios';
 import ContactContext from './contactContext';
 import ContactReducer from './contactReducer';
-import { ADD_CONTACT, CLEAR_FILTER,GET_CONTACT,UPDATE_ERROR,UPDATE_CONTACT, DELETE_CONTACT,CLEAR_CURRENT,CLEAR_CONTACTS, CONTACT_ERROR,SEARCH_CONTACTS, CURRENT_CONTACT,DELETE_ERROR,CLEAR_ERROR_CONTACTS ,GET_ERROR} from '../types';
+import { ADD_CONTACT, CLEAR_FILTER,GET_CONTACT,UPDATE_ERROR,UPDATE_CONTACT, DELETE_CONTACT,CLEAR_CURRENT,CLEAR_CONTACTS, CONTACT_ERROR,SEARCH_CONTACTS, CURRENT_CONTACT,DELETE_ERROR,CLEAR_ERROR_CONTACTS ,GET_ERROR,LOADER} from '../types';
 
 const ContactState = (props) => {
 	const initialState = {
 		filtered: null,
 		current: null,
 		contacts:null,
-		error: null
+		error: null,
+		loadi: true,
 	}
 
 
@@ -22,6 +23,8 @@ const ContactState = (props) => {
 	const getContacts = async() => {
 		
 		try {
+
+			// loader();
 			const res = await axios.get('/api/contacts');
 
 			// console.log(res.data);
@@ -39,6 +42,12 @@ const ContactState = (props) => {
 			})
 		}
 	}
+
+	// const loader = () => {
+	// 	dispatch({
+	// 		type: LOADER
+	// 	})
+	// }
 
 
 	// Add contact
@@ -168,6 +177,7 @@ const ContactState = (props) => {
 				current: state.current,
 				filtered: state.filtered,
 				error: state.error,
+				loadi:state.loadi,
 				getContacts,
 				addContact,
 				deleteContact,

@@ -6,7 +6,7 @@ const ContactItem = ({ contact, popOpen }) => {
   const { deleteContact, currentContact, clearCurrent } = contactContext;
   const { name, phone, email, type, _id } = contact;
 
-  // const { display, setDisplay } = useState(false);
+
 
   const onDelete = () => {
     deleteContact(_id);
@@ -18,33 +18,24 @@ const ContactItem = ({ contact, popOpen }) => {
     popOpen();
   };
 
-  // const shContact = () => {
-  //   setDisplay(!display);
-  // };
-  const smallQuery = (
-    <div className="btns-icons">
-      <button className="btn-danger" onClick={onDelete}>
-        <i className="fas fa-trash-alt"></i>
-      </button>
-      <button className="btn-normal" onClick={setCurrent}>
-        <i className="fas fa-pen"></i>
-      </button>
-    </div>
-  );
+
+
 
   const normalQuery = (
     <div className="btns">
+        <i className="fas fa-user-cog"></i>
+     
       <button className="btn-danger" onClick={onDelete}>
-        Delete
+       <span>Delete</span><i className="fas fa-trash-alt"></i>
       </button>
       <button className="btn-normal" onClick={setCurrent}>
-        Edit
+       <span>Edit</span><i className="fas fa-pen"></i>
+       
       </button>
     </div>
   );
 
-  const showct = (
-    <div>
+  const showct = (<div>
       {email && (
         <div className="sm">
           <i className="fas fa-envelope"></i> {email}
@@ -63,14 +54,13 @@ const ContactItem = ({ contact, popOpen }) => {
         </span>
       </div>
       {normalQuery}
-      {smallQuery}
+      
     </div>
   );
 
   return (
-    <div className="my-2 contact-item-box">
+    <div className="my-2 contact-item-box"> 
       <h1>{name.slice(0, 1).toUpperCase() + name.slice(1)}</h1>
-      {/* <button onClick={shContact}>active</button> */}
       {showct}
     </div>
   );

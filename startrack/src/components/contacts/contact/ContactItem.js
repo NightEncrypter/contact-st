@@ -36,8 +36,10 @@ const ContactItem = ({ contact, popOpen }) => {
   );
 
   const showct = (<div>
+  <div className="bottom-line"></div>
       {email && (
-        <div className="sm">
+      <div className="sm">
+        
           <i className="fas fa-envelope"></i> {email}
         </div>
       )}
@@ -50,7 +52,7 @@ const ContactItem = ({ contact, popOpen }) => {
 
       <div className="special-1">
         <span className={type === "personal" ? "badge-blue" : "badge-green"}>
-          {type}{" "}
+          {type}
         </span>
       </div>
       {normalQuery}
@@ -60,7 +62,7 @@ const ContactItem = ({ contact, popOpen }) => {
 
   return (
     <div className="my-2 contact-item-box"> 
-      <h1>{name.slice(0, 1).toUpperCase() + name.slice(1)}</h1>
+      <h1 className="contact-name">{name.slice(0, 1).toUpperCase() + name.slice(1)}</h1>
       {showct}
     </div>
   );

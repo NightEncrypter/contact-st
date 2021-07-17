@@ -74,7 +74,7 @@ const AuthState = (props) => {
 
 			loadUsers();
 		} catch (error) {
-			// console.log(error);
+			console.log(error.response.data);
 			dispatch({
 				type: REG_FAIL,
 				payload: error.response.data.msg,

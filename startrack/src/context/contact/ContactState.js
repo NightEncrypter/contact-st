@@ -3,7 +3,7 @@ import React, { useReducer } from 'react';
 import axios from 'axios';
 import ContactContext from './contactContext';
 import ContactReducer from './contactReducer';
-import { ADD_CONTACT, CLEAR_FILTER,GET_CONTACT,UPDATE_ERROR,UPDATE_CONTACT, DELETE_CONTACT,CLEAR_CURRENT,CLEAR_CONTACTS, CONTACT_ERROR,SEARCH_CONTACTS, CURRENT_CONTACT,DELETE_ERROR,CLEAR_ERROR_CONTACTS ,GET_ERROR,LOADER} from '../types';
+import { ADD_CONTACT, CLEAR_FILTER,GET_CONTACT,UPDATE_ERROR,UPDATE_CONTACT, DELETE_CONTACT,CLEAR_CURRENT,CLEAR_CONTACTS, CONTACT_ERROR,SEARCH_CONTACTS, CURRENT_CONTACT,DELETE_ERROR,CLEAR_ERROR_CONTACTS ,GET_ERROR} from '../types';
 
 const ContactState = (props) => {
 	const initialState = {
@@ -33,12 +33,12 @@ const ContactState = (props) => {
 				type: GET_CONTACT,
 				payload: res.data,
 			})
-		} catch (err) {
+		} catch (error) {
 			// console.log(err.response.data.msg);
 
 			dispatch({
 				type: GET_ERROR,
-				payload:err.response.data.msg
+				payload:error.response.msg
 			})
 		}
 	}
@@ -61,18 +61,18 @@ const ContactState = (props) => {
 		try {
 			const res = await axios.post('/api/contacts', contact, config);
 
-			console.log(res.data);
+			// console.log(res.data);
 			dispatch({
 				type: ADD_CONTACT,
 				payload: res.data,
 			})
 		} catch (error) {
-			// console.log(error.response.data.msg);
+			// console.log(error.response.data.errors.errors);
 
 			dispatch({
 
 				type: CONTACT_ERROR,
-				payload: error.response.data.msg,
+				payload: error.response.msg,
 			})
 		}
 		// contact.id = uuidv4();
@@ -94,7 +94,7 @@ const ContactState = (props) => {
 		} catch (error) {
 			dispatch({
 				type: DELETE_ERROR,
-				payload:error.response.data.msg,
+				// payload:error.response.data.msg,
 			});
 		}
 		
@@ -127,6 +127,8 @@ const ContactState = (props) => {
 				payload: res.data,
 			});
 		} catch (error) {
+
+			// console.log(error.response.data.msg)
 			dispatch({
 				type: UPDATE_ERROR,
 				payload:error.response.msg,

@@ -18,16 +18,26 @@
         display:none;
       }
       i{
-        display:block;
+        // display:block;
         color:white;
         font-size:14px;
       }
+
+      
     }
-  
-  }
-
  
-
+  }
+  .btns:hover .btn-normal i{
+        
+display: block;
+    }
+    .btns:hover .btn-danger i{
+display: block;
+      
+    
+    }
+ 
+  
  
   .navbar {
     
@@ -60,11 +70,14 @@
         transition: 0.4s ease-in-out 0.3s;
 
         a {
-          padding: 0;
+          padding: 0.3rem;
           color: $bg-color;
-          // opacity: 0.8;
-          // transition: opacity 0.4s;
+          opacity: 0.9;
           background: transparent;
+          font-weight:$fw-xxl;
+          transform-origin:left;
+          transition: border-bottom-width 0.5s;
+          
 
           &:hover,
           &:focus {
@@ -161,6 +174,7 @@
 
   .addcontact-btn {
     width: 3.8rem;
+    height:3.8rem;
     line-height: 1.2em;
     display: block;
     border: none;
@@ -172,16 +186,56 @@
     position: fixed;
     bottom: 2rem;
     right: 1.5rem;
+    transform: scale(1);
     z-index: 5;
-
+animation: raise 3s infinite;
     cursor: pointer;
-    transition: 0.5s;
+
+
+box-shadow:0 0 10px 2px rgba(88, 4, 114,0.1);
+   
+
+    transition: 0.5s ;
+
+    &:hover{
+    transform: scale(1.09);
+
+      background-color: lighten($bg-color,20%);
+    }
   }
 
   .addcontact-btnout {
     display: none;
   }
 
+
+  @keyframes raise {
+    0%{
+      // box-shadow:0 0 10px 0px rgba(0,0,0,0.1);
+box-shadow:0 0 10px 2px rgba(88, 4, 114,0.1);
+
+    }
+    25%{
+      // box-shadow:0 0 11px 2px rgba(0,0,0,0.3);
+box-shadow:0 0 12px 4px rgba(88, 4, 114,0.2);
+
+    }
+    50%{
+      // box-shadow:0 0 13px 4px rgba(0,0,0,0.5);
+box-shadow:0 0 14px 8px rgba(88, 4, 114,0.3);
+
+    }
+    75%{
+      // box-shadow:0 0 15px 6px rgba(0,0,0,0.7);
+box-shadow:0 0 16px 12px rgba(88, 4, 114,0.4);
+
+    }
+    100%{
+      // box-shadow:0 0 17px 8px rgba(0,0,0,0.9);
+box-shadow:0 0 18px 16px rgba(88, 4, 114,0.5);
+
+    }
+  }
   .overlay {
     position: fixed;
     background: rgba(0, 0, 0, 0.8);
@@ -193,18 +247,22 @@
     transform-origin: bottom;
     transform: scaleY(0);
     transition: 0.5s;
+    display: flex;
+    justify-content: center;
   }
   .active.overlay {
     transform: scaleY(1);
   }
   .popup-box {
-  
-
+  position: fixed;
+  justify-content: center;
+// top:0;
     z-index: 19;
-margin: 0 auto;
-margin-top: 30%;
-    max-width: 25rem;
-  height: 25rem;
+margin: 20% auto;
+// margin-top: ;
+    width: 25rem;
+  min-height: 28rem;
+  box-shadow:0 0 30px 2px rgba(0, 0, 0, 0.8),0 0 30px 2px #5804725e;
  
 
     transform: translateY(100%);
@@ -276,7 +334,7 @@ padding: .5rem;
 
   .main-lists {
     max-width: 20rem;
-    margin:1.5rem auto;
+    margin:3.5rem auto;
     padding:0.6rem;
 
     #search-box{

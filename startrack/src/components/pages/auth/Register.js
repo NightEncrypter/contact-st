@@ -13,11 +13,17 @@ const Register = (props) => {
 	const { setAlert } = alertContext;
 	const { error,registerUser,clearErrors,isAuthenticated} = authContext;
 
+
+	const [icon, setIcon] = useState(false);
 useEffect(() => {
 
 	if (isAuthenticated) {
+		setAlert("Registered success", "success");
 		props.history.push('/');
+
 	}
+
+
 	if (error === 'user already exist') {
 		setAlert(error, 'user-exist');
 		clearErrors();
@@ -90,7 +96,7 @@ useEffect(() => {
 				<div className="reg-group">
 				
 					<input
-						type="text"
+						type={icon?"text":"password"}
 						name="password"
 						className="reg-input"
 						onChange={onChange}
@@ -98,7 +104,7 @@ useEffect(() => {
 							required
 							autoComplete="off"
 						/>
-	<span><i className="fas fa-lock"></i></span>
+	<span>  <i onClick={() => setIcon(!icon)} className={icon ? "fas fa-unlock":"fas fa-lock"} style={iconStyle}></i></span>
 
 							<label htmlFor="password">Password</label>
 							<div className="bb-line"></div>
@@ -107,7 +113,7 @@ useEffect(() => {
 				<div className="reg-group">
 			
 					<input
-						type="text"
+					type={icon?"text":"password"}
 						onChange={onChange}
 						name="password2"
 						className="reg-input"
@@ -116,7 +122,7 @@ useEffect(() => {
 							autoComplete="off"
 						/>
 
-	<span><i className="fas fa-lock"></i></span>
+<span>  <i onClick={() => setIcon(!icon)} className={icon ? "fas fa-unlock":"fas fa-lock"} style={iconStyle}></i></span>
 
 								<label htmlFor="password2">Confirm Password</label>
 		<div className="bb-line"></div>
@@ -133,7 +139,9 @@ useEffect(() => {
 };
 
 export default Register;
-
+const iconStyle = {
+	cursor: "pointer"
+}
 
 // const obj1 = {
 //     id: 1,

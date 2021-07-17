@@ -35,6 +35,10 @@ const ContactForm = ({open ,popClose}) => {
 
 	useEffect(() => {
 
+// 		if (contactContext.error) {
+// 		alertContext.setAlert(contactContext.error);
+// 		// clearErrorContacts();
+// }
 		if (error) {
 		alertContext.setAlert(error);
 		clearErrorContacts();
@@ -81,10 +85,12 @@ const ContactForm = ({open ,popClose}) => {
 		} else {
 			updateContact(contact);
 			clearCurrent();
+			alertContext.setAlert('Update saved','success' );
+
 		}
 
 		if ((name && email && phone) === '') {
-			alertContext.setAlert('Please fill all required input fields');
+			alertContext.setAlert('Please fill all required input fields','input-fields-empty');
 			setAlert1(true);
 			setTimeout(() => setAlert1(false), 5000);
 
@@ -170,11 +176,12 @@ const ContactForm = ({open ,popClose}) => {
 				<input
 					style={style1}
 					type="number"
-					name="phone"
+							name="phone"
+							min="999999999"
 					autoComplete="off"
 					value={phone}
 					className="input-style"
-					onChange={onChange}
+							onChange={onChange}
 				required
 				/>
 				<span><i className="fas fa-mobile-alt"></i></span>

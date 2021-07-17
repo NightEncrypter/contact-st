@@ -39,7 +39,7 @@ router.post(
 		auth,
 		[
 			check('name', 'Name is required').notEmpty(),
-			check('phone', 'Number is required').notEmpty().isLength({ min: 10 }),
+			check('phone', 'Min 10 numbers is required').notEmpty().isLength({ min: 10 }),
 		],
 	],
 	async (req, res) => {

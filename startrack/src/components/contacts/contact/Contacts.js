@@ -3,9 +3,13 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Spinner from "./Spinner";
 import ContactItem from "./ContactItem";
 import ContactContext from "../../../context/contact/contactContext";
+import AuthContext from "../../../context/auth/authContext";
 const Contacts = ({popOpen}) => {
   const contactContext = useContext(ContactContext);
-  const { filtered, getContacts, contacts, loading } = contactContext;
+  const authContext = useContext(AuthContext);
+
+  const { filtered, getContacts, contacts } = contactContext;
+  const {  loading } = authContext;
 
   useEffect(() => {
     getContacts();
